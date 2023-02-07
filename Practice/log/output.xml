@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.9 on win32)" generated="20230116 16:42:59.722" rpa="false" schemaversion="3">
+<suite id="s1" name="Login" source="D:\Automation\Practice\login.robot">
+<test id="s1-t1" name="login" line="13">
+<kw name="Agreement">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.visa.gov.bd/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230116 16:43:00.544" level="INFO">Opening browser 'chrome' to base url 'https://www.visa.gov.bd/'.</msg>
+<status status="PASS" starttime="20230116 16:43:00.543" endtime="20230116 16:43:19.626"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230116 16:43:19.626" endtime="20230116 16:43:20.972"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>xpath=//input[@id='ctl00_C1_wz_Chk']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20230116 16:43:20.973" level="INFO">Selecting checkbox 'xpath=//input[@id='ctl00_C1_wz_Chk']'.</msg>
+<status status="PASS" starttime="20230116 16:43:20.972" endtime="20230116 16:43:25.865"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 16:43:27.873" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 16:43:25.866" endtime="20230116 16:43:27.874"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//input[@id='ctl00_C1_wz_StartNavigationTemplateContainerID_StartNextButton']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230116 16:43:27.878" level="INFO">Clicking button 'xpath=//input[@id='ctl00_C1_wz_StartNavigationTemplateContainerID_StartNextButton']'.</msg>
+<status status="PASS" starttime="20230116 16:43:27.874" endtime="20230116 16:43:29.896"/>
+</kw>
+<status status="PASS" starttime="20230116 16:43:00.543" endtime="20230116 16:43:29.896"/>
+</kw>
+<kw name="Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@id='ctl00_C1_wz_txtEmailAdd']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230116 16:43:29.897" level="INFO">Typing text 'abc@gmail.com' into text field 'xpath=//input[@id='ctl00_C1_wz_txtEmailAdd']'.</msg>
+<status status="PASS" starttime="20230116 16:43:29.896" endtime="20230116 16:43:31.585"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@id='ctl00_C1_wz_txtConfirmEmailAdd']</arg>
+<arg>${confirm_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230116 16:43:31.589" level="INFO">Typing text 'abc@gmail.com' into text field 'xpath=//input[@id='ctl00_C1_wz_txtConfirmEmailAdd']'.</msg>
+<status status="PASS" starttime="20230116 16:43:31.586" endtime="20230116 16:43:31.789"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 16:43:32.793" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230116 16:43:31.789" endtime="20230116 16:43:32.793"/>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<arg>${captcha}</arg>
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20230116 16:43:33.264" level="INFO">Current page contains image 'xpath=//tbody/tr[4]/td[2]/div[1]/img[1]'.</msg>
+<status status="PASS" starttime="20230116 16:43:32.794" endtime="20230116 16:43:33.265"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${captcha}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230116 16:43:33.321" level="INFO">Element 'xpath=//tbody/tr[4]/td[2]/div[1]/img[1]' is displayed.</msg>
+<status status="PASS" starttime="20230116 16:43:33.265" endtime="20230116 16:43:33.321"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${image_url}</var>
+<arg>${captcha}</arg>
+<arg>src</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230116 16:43:33.337" level="INFO">${image_url} = https://www.visa.gov.bd/CaptchaImage.axd?guid=bd47042a-bd9a-4f4b-bd7d-eb2726b1315c</msg>
+<status status="PASS" starttime="20230116 16:43:33.321" endtime="20230116 16:43:33.337"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${image_url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230116 16:43:33.337" endtime="20230116 16:43:33.338"/>
+</kw>
+<kw name="Run Process" library="Process">
+<arg>curl</arg>
+<arg>-o</arg>
+<arg>captcha.png</arg>
+<arg>${image_url}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<msg timestamp="20230116 16:43:33.338" level="INFO">Starting process:
+curl -o captcha.png https://www.visa.gov.bd/CaptchaImage.axd?guid=bd47042a-bd9a-4f4b-bd7d-eb2726b1315c</msg>
+<msg timestamp="20230116 16:43:33.521" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20230116 16:43:34.489" level="INFO">Process completed.</msg>
+<status status="PASS" starttime="20230116 16:43:33.338" endtime="20230116 16:43:34.489"/>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<var>${value}</var>
+<arg>Insert your Captcha</arg>
+<doc>Pauses execution and asks user to input a value.</doc>
+<msg timestamp="20230116 16:44:56.795" level="INFO">${value} = 27EDE</msg>
+<status status="PASS" starttime="20230116 16:43:34.489" endtime="20230116 16:44:56.795"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_C1_wz_txtSecCode</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230116 16:44:56.796" level="INFO">Typing text '27EDE' into text field 'id=ctl00_C1_wz_txtSecCode'.</msg>
+<status status="PASS" starttime="20230116 16:44:56.795" endtime="20230116 16:44:56.860"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//input[@id='ctl00_C1_wz_StartNavigationTemplateContainerID_StartNextButton']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230116 16:44:56.861" level="INFO">Clicking button 'xpath=//input[@id='ctl00_C1_wz_StartNavigationTemplateContainerID_StartNextButton']'.</msg>
+<status status="PASS" starttime="20230116 16:44:56.860" endtime="20230116 16:44:58.914"/>
+</kw>
+<status status="PASS" starttime="20230116 16:43:29.896" endtime="20230116 16:44:58.914"/>
+</kw>
+<status status="PASS" starttime="20230116 16:43:00.541" endtime="20230116 16:44:58.915"/>
+</test>
+<status status="PASS" starttime="20230116 16:42:59.724" endtime="20230116 16:44:58.916"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

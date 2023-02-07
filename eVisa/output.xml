@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.9 on win32)" generated="20230103 17:08:47.484" rpa="false" schemaversion="3">
+<suite id="s1" name="Evisamfa" source="d:\Automation\eVisa\evisamfa.robot">
+<test id="s1-t1" name="Login" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://192.168.4.94:8082/evisa-portal/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230103 17:08:48.001" level="INFO">Opening browser 'chrome' to base url 'http://192.168.4.94:8082/evisa-portal/'.</msg>
+<status status="PASS" starttime="20230103 17:08:47.998" endtime="20230103 17:08:53.754"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230103 17:08:53.757" endtime="20230103 17:08:53.892"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@href='/evisa-portal/oauth2/authorization/iam']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230103 17:08:53.895" level="INFO">Clicking element 'xpath=//a[@href='/evisa-portal/oauth2/authorization/iam']'.</msg>
+<status status="PASS" starttime="20230103 17:08:53.893" endtime="20230103 17:08:54.561"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 17:08:56.572" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230103 17:08:54.562" endtime="20230103 17:08:56.572"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>raihan1@yopmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230103 17:08:56.575" level="INFO">Typing text 'raihan1@yopmail.com' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20230103 17:08:56.574" endtime="20230103 17:08:56.670"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 17:08:57.679" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230103 17:08:56.671" endtime="20230103 17:08:57.679"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230103 17:08:57.682" level="INFO">Typing text '123456' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230103 17:08:57.680" endtime="20230103 17:08:57.754"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 17:08:58.762" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230103 17:08:57.755" endtime="20230103 17:08:58.762"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230103 17:08:58.765" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20230103 17:08:58.764" endtime="20230103 17:08:59.528"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 17:09:00.540" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230103 17:08:59.530" endtime="20230103 17:09:00.540"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[contains(text(),'Try another method?')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230103 17:09:00.543" level="INFO">Clicking element 'xpath=//a[contains(text(),'Try another method?')]'.</msg>
+<status status="PASS" starttime="20230103 17:09:00.542" endtime="20230103 17:09:00.589"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 17:09:02.591" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230103 17:09:00.590" endtime="20230103 17:09:02.592"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[contains(text(),'E-mail')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230103 17:09:02.597" level="INFO">Clicking element 'xpath=//div[contains(text(),'E-mail')]'.</msg>
+<status status="PASS" starttime="20230103 17:09:02.594" endtime="20230103 17:09:02.641"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 17:09:04.654" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230103 17:09:02.642" endtime="20230103 17:09:04.654"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.open('https://yopmail.com/en/', '_blank')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230103 17:09:04.658" level="INFO">Executing JavaScript:
+window.open('https://yopmail.com/en/', '_blank')
+Without any arguments.</msg>
+<status status="PASS" starttime="20230103 17:09:04.656" endtime="20230103 17:09:04.692"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 17:09:06.700" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230103 17:09:04.693" endtime="20230103 17:09:06.700"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230103 17:09:06.708" level="INFO">${handles} = ['CDwindow-7B01D0B1D397E5197BB4F179CA6D01C5', 'CDwindow-940B054DD76794C3EFF135E1797EFDB5']</msg>
+<status status="PASS" starttime="20230103 17:09:06.702" endtime="20230103 17:09:06.708"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles[1]}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230103 17:09:06.710" endtime="20230103 17:09:06.762"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 17:09:09.778" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230103 17:09:06.764" endtime="20230103 17:09:09.778"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@id='login']</arg>
+<arg>raihan1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230103 17:09:09.781" level="INFO">Typing text 'raihan1' into text field 'xpath=//input[@id='login']'.</msg>
+<status status="PASS" starttime="20230103 17:09:09.779" endtime="20230103 17:09:09.848"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//i[contains(text(),'')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230103 17:09:09.852" level="INFO">Clicking element 'xpath=//i[contains(text(),'')]'.</msg>
+<status status="PASS" starttime="20230103 17:09:09.849" endtime="20230103 17:09:11.382"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 17:09:18.398" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20230103 17:09:11.385" endtime="20230103 17:09:18.400"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//iframe[@id='ifinbox']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230103 17:09:18.408" level="INFO">Clicking element 'xpath=//iframe[@id='ifinbox']'.</msg>
+<status status="PASS" starttime="20230103 17:09:18.403" endtime="20230103 17:09:18.462"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 17:09:20.476" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230103 17:09:18.463" endtime="20230103 17:09:20.479"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${otp}</var>
+<arg>//iframe[@id='ifmail']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230103 17:09:20.504" level="INFO">${otp} = </msg>
+<status status="PASS" starttime="20230103 17:09:20.482" endtime="20230103 17:09:20.504"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 17:09:23.514" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230103 17:09:20.505" endtime="20230103 17:09:23.514"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles[0]}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230103 17:09:23.515" endtime="20230103 17:09:23.535"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${otp}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230103 17:09:23.538" level="INFO"/>
+<status status="PASS" starttime="20230103 17:09:23.536" endtime="20230103 17:09:23.538"/>
+</kw>
+<status status="PASS" starttime="20230103 17:08:47.996" endtime="20230103 17:09:23.539"/>
+</test>
+<status status="PASS" starttime="20230103 17:08:47.495" endtime="20230103 17:09:23.542"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Evisamfa">Evisamfa</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

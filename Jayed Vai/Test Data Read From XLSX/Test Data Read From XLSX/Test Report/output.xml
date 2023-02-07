@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.9.13 on win32)" generated="20221206 23:14:23.657" rpa="false" schemaversion="3">
+<suite id="s1" name="Opensource-Demo Xlsx" source="C:\Users\hp\Desktop\KONA_20221206\Automation_Script_Jayed\opensource-demo_xlsx.robot">
+<kw name="Login First" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221206 23:14:24.860" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20221206 23:14:24.844" endtime="20221206 23:16:37.375"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221206 23:16:37.375" endtime="20221206 23:16:37.503"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:16:47.510" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20221206 23:16:37.503" endtime="20221206 23:16:47.510"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<arg>${Valid_User}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 23:16:47.511" level="INFO">Typing text 'Admin' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20221206 23:16:47.511" endtime="20221206 23:16:47.585"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:16:49.600" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:16:47.591" endtime="20221206 23:16:49.600"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>${Valid_Pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 23:16:49.600" level="INFO">Typing text 'admin123' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20221206 23:16:49.600" endtime="20221206 23:16:49.696"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:16:51.702" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:16:49.696" endtime="20221206 23:16:51.702"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="app"]//button[@type='submit' and contains(., ' Login ')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:16:51.703" level="INFO">Clicking button 'xpath://*[@id="app"]//button[@type='submit' and contains(., ' Login ')]'.</msg>
+<status status="PASS" starttime="20221206 23:16:51.702" endtime="20221206 23:16:51.756"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:16:53.773" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:16:51.760" endtime="20221206 23:16:53.773"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="app"]//span/h6[contains(., 'Dashboard')]</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221206 23:16:53.773" endtime="20221206 23:16:54.680"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20221206 23:16:54.695" level="INFO">Current location is 'https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index'.</msg>
+<status status="PASS" starttime="20221206 23:16:54.680" endtime="20221206 23:16:54.695"/>
+</kw>
+<status status="PASS" starttime="20221206 23:14:24.828" endtime="20221206 23:16:54.695"/>
+</kw>
+<test id="s1-t1" name="Verify result after searching with Ch and United State" line="18">
+<kw name=" Search">
+<arg>ch</arg>
+<arg>United State</arg>
+<kw name="Go Directory Page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="app"]//a/span[contains(., 'Directory')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:16:54.695" level="INFO">Clicking element 'xpath://*[@id="app"]//a/span[contains(., 'Directory')]'.</msg>
+<status status="PASS" starttime="20221206 23:16:54.695" endtime="20221206 23:16:56.111"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:01.133" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221206 23:16:56.111" endtime="20221206 23:17:01.133"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/directory/viewDirectory</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20221206 23:17:01.141" level="INFO">Current location is 'https://opensource-demo.orangehrmlive.com/web/index.php/directory/viewDirectory'.</msg>
+<status status="PASS" starttime="20221206 23:17:01.134" endtime="20221206 23:17:01.141"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:03.152" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:01.141" endtime="20221206 23:17:03.153"/>
+</kw>
+<status status="PASS" starttime="20221206 23:16:54.695" endtime="20221206 23:17:03.153"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:05.163" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:03.154" endtime="20221206 23:17:05.163"/>
+</kw>
+<kw name=" Type Name">
+<arg>${Name}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[placeholder="Type for hints..."]</arg>
+<arg>${Name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 23:17:05.164" level="INFO">Typing text 'ch' into text field 'css:input[placeholder="Type for hints..."]'.</msg>
+<status status="PASS" starttime="20221206 23:17:05.164" endtime="20221206 23:17:05.235"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:07.246" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:05.235" endtime="20221206 23:17:07.246"/>
+</kw>
+<status status="PASS" starttime="20221206 23:17:05.164" endtime="20221206 23:17:07.256"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:09.260" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:07.256" endtime="20221206 23:17:09.260"/>
+</kw>
+<kw name="Type Country">
+<arg>${Country}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[3]/div/div[2]/div/div/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:17:09.260" level="INFO">Clicking element 'xpath=//div[3]/div/div[2]/div/div/div'.</msg>
+<status status="PASS" starttime="20221206 23:17:09.260" endtime="20221206 23:17:09.317"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:11.321" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:09.317" endtime="20221206 23:17:11.321"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]//*[contains(text(), "${Country}")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:17:11.321" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]//*[contains(text(), "United State")]'.</msg>
+<msg timestamp="20221206 23:17:11.494" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221206 23:17:11.494" level="FAIL">Element with locator '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]//*[contains(text(), "United State")]' not found.</msg>
+<status status="FAIL" starttime="20221206 23:17:11.321" endtime="20221206 23:17:11.503"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221206 23:17:11.503" endtime="20221206 23:17:11.503"/>
+</kw>
+<status status="FAIL" starttime="20221206 23:17:09.260" endtime="20221206 23:17:11.503"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221206 23:17:11.503" endtime="20221206 23:17:11.503"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.oxd-button--secondary</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221206 23:17:11.503" endtime="20221206 23:17:11.503"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221206 23:17:11.503" endtime="20221206 23:17:11.503"/>
+</kw>
+<kw name="Verify Search Result">
+<arg>${Name}</arg>
+<status status="NOT RUN" starttime="20221206 23:17:11.503" endtime="20221206 23:17:11.503"/>
+</kw>
+<status status="FAIL" starttime="20221206 23:16:54.695" endtime="20221206 23:17:11.503"/>
+</kw>
+<status status="FAIL" starttime="20221206 23:16:54.695" endtime="20221206 23:17:11.503">Element with locator '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]//*[contains(text(), "United State")]' not found.</status>
+</test>
+<test id="s1-t2" name="Verify result after searching with Odis Adalwin and USA" line="18">
+<kw name=" Search">
+<arg>Odis Adalwin</arg>
+<arg>USA</arg>
+<kw name="Go Directory Page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="app"]//a/span[contains(., 'Directory')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:17:11.503" level="INFO">Clicking element 'xpath://*[@id="app"]//a/span[contains(., 'Directory')]'.</msg>
+<status status="PASS" starttime="20221206 23:17:11.503" endtime="20221206 23:17:13.222"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:18.236" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:13.227" endtime="20221206 23:17:18.236"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/directory/viewDirectory</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20221206 23:17:18.241" level="INFO">Current location is 'https://opensource-demo.orangehrmlive.com/web/index.php/directory/viewDirectory'.</msg>
+<status status="PASS" starttime="20221206 23:17:18.236" endtime="20221206 23:17:18.241"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:20.251" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:18.241" endtime="20221206 23:17:20.251"/>
+</kw>
+<status status="PASS" starttime="20221206 23:17:11.503" endtime="20221206 23:17:20.251"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:22.255" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:20.251" endtime="20221206 23:17:22.255"/>
+</kw>
+<kw name=" Type Name">
+<arg>${Name}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[placeholder="Type for hints..."]</arg>
+<arg>${Name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 23:17:22.255" level="INFO">Typing text 'Odis Adalwin' into text field 'css:input[placeholder="Type for hints..."]'.</msg>
+<status status="PASS" starttime="20221206 23:17:22.255" endtime="20221206 23:17:22.337"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:24.345" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:22.337" endtime="20221206 23:17:24.345"/>
+</kw>
+<status status="PASS" starttime="20221206 23:17:22.255" endtime="20221206 23:17:24.345"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:26.347" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:24.345" endtime="20221206 23:17:26.347"/>
+</kw>
+<kw name="Type Country">
+<arg>${Country}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[3]/div/div[2]/div/div/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:17:26.347" level="INFO">Clicking element 'xpath=//div[3]/div/div[2]/div/div/div'.</msg>
+<status status="PASS" starttime="20221206 23:17:26.347" endtime="20221206 23:17:26.395"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:28.404" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:26.395" endtime="20221206 23:17:28.404"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]//*[contains(text(), "${Country}")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:17:28.405" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]//*[contains(text(), "USA")]'.</msg>
+<status status="PASS" starttime="20221206 23:17:28.404" endtime="20221206 23:17:28.462"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:30.469" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:28.463" endtime="20221206 23:17:30.470"/>
+</kw>
+<status status="PASS" starttime="20221206 23:17:26.347" endtime="20221206 23:17:30.470"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:32.479" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:30.470" endtime="20221206 23:17:32.479"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.oxd-button--secondary</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:17:32.480" level="INFO">Clicking element 'css=.oxd-button--secondary'.</msg>
+<status status="PASS" starttime="20221206 23:17:32.479" endtime="20221206 23:17:32.520"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:34.523" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:32.520" endtime="20221206 23:17:34.524"/>
+</kw>
+<kw name="Verify Search Result">
+<arg>${Name}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div/div/div/p[1]</arg>
+<arg>${Name}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20221206 23:17:34.526" level="INFO">Verifying element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div/div/div/p[1]' contains exact text 'Odis Adalwin'.</msg>
+<status status="PASS" starttime="20221206 23:17:34.525" endtime="20221206 23:17:34.556"/>
+</kw>
+<status status="PASS" starttime="20221206 23:17:34.524" endtime="20221206 23:17:34.556"/>
+</kw>
+<status status="PASS" starttime="20221206 23:17:11.503" endtime="20221206 23:17:34.564"/>
+</kw>
+<status status="PASS" starttime="20221206 23:17:11.503" endtime="20221206 23:17:34.564"/>
+</test>
+<test id="s1-t3" name="Verify result after searching with Sonjoy and India" line="18">
+<kw name=" Search">
+<arg>Sonjoy</arg>
+<arg>Texas</arg>
+<kw name="Go Directory Page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="app"]//a/span[contains(., 'Directory')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:17:34.568" level="INFO">Clicking element 'xpath://*[@id="app"]//a/span[contains(., 'Directory')]'.</msg>
+<status status="PASS" starttime="20221206 23:17:34.568" endtime="20221206 23:17:35.607"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:40.619" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:35.607" endtime="20221206 23:17:40.620"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/directory/viewDirectory</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20221206 23:17:40.627" level="INFO">Current location is 'https://opensource-demo.orangehrmlive.com/web/index.php/directory/viewDirectory'.</msg>
+<status status="PASS" starttime="20221206 23:17:40.620" endtime="20221206 23:17:40.627"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:42.643" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:40.627" endtime="20221206 23:17:42.644"/>
+</kw>
+<status status="PASS" starttime="20221206 23:17:34.568" endtime="20221206 23:17:42.644"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:44.653" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:42.644" endtime="20221206 23:17:44.653"/>
+</kw>
+<kw name=" Type Name">
+<arg>${Name}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[placeholder="Type for hints..."]</arg>
+<arg>${Name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 23:17:44.654" level="INFO">Typing text 'Sonjoy' into text field 'css:input[placeholder="Type for hints..."]'.</msg>
+<status status="PASS" starttime="20221206 23:17:44.654" endtime="20221206 23:17:44.740"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:46.746" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:44.740" endtime="20221206 23:17:46.746"/>
+</kw>
+<status status="PASS" starttime="20221206 23:17:44.653" endtime="20221206 23:17:46.746"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:48.759" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:46.746" endtime="20221206 23:17:48.759"/>
+</kw>
+<kw name="Type Country">
+<arg>${Country}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[3]/div/div[2]/div/div/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:17:48.759" level="INFO">Clicking element 'xpath=//div[3]/div/div[2]/div/div/div'.</msg>
+<status status="PASS" starttime="20221206 23:17:48.759" endtime="20221206 23:17:48.808"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:50.818" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:48.808" endtime="20221206 23:17:50.819"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]//*[contains(text(), "${Country}")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:17:50.819" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]//*[contains(text(), "Texas")]'.</msg>
+<status status="PASS" starttime="20221206 23:17:50.819" endtime="20221206 23:17:50.867"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:52.871" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:50.867" endtime="20221206 23:17:52.871"/>
+</kw>
+<status status="PASS" starttime="20221206 23:17:48.759" endtime="20221206 23:17:52.871"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:54.886" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:52.871" endtime="20221206 23:17:54.886"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.oxd-button--secondary</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:17:54.886" level="INFO">Clicking element 'css=.oxd-button--secondary'.</msg>
+<status status="PASS" starttime="20221206 23:17:54.886" endtime="20221206 23:17:54.924"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:56.937" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:54.924" endtime="20221206 23:17:56.938"/>
+</kw>
+<kw name="Verify Search Result">
+<arg>${Name}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div/div/div/p[1]</arg>
+<arg>${Name}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20221206 23:17:56.938" level="INFO">Verifying element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div/div/div/p[1]' contains exact text 'Sonjoy'.</msg>
+<msg timestamp="20221206 23:17:57.107" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221206 23:17:57.107" level="FAIL">The text of element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div/div/div/p[1]' should have been 'Sonjoy' but it was 'Odis Adalwin'.</msg>
+<status status="FAIL" starttime="20221206 23:17:56.938" endtime="20221206 23:17:57.107"/>
+</kw>
+<status status="FAIL" starttime="20221206 23:17:56.938" endtime="20221206 23:17:57.107"/>
+</kw>
+<status status="FAIL" starttime="20221206 23:17:34.568" endtime="20221206 23:17:57.107"/>
+</kw>
+<status status="FAIL" starttime="20221206 23:17:34.564" endtime="20221206 23:17:57.107">The text of element '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div/div/div/p[1]' should have been 'Sonjoy' but it was 'Odis Adalwin'.</status>
+</test>
+<kw name="Logout Last" type="TEARDOWN">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.oxd-userdropdown-icon</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:17:57.112" level="INFO">Clicking element 'css=.oxd-userdropdown-icon'.</msg>
+<status status="PASS" starttime="20221206 23:17:57.110" endtime="20221206 23:17:57.165"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:17:59.174" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221206 23:17:57.165" endtime="20221206 23:17:59.174"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="app"]//a[@href="/web/index.php/auth/logout"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:17:59.175" level="INFO">Clicking element '//*[@id="app"]//a[@href="/web/index.php/auth/logout"]'.</msg>
+<status status="PASS" starttime="20221206 23:17:59.175" endtime="20221206 23:18:00.132"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:18:03.141" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221206 23:18:00.132" endtime="20221206 23:18:03.141"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20221206 23:18:03.146" level="INFO">Current location is 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20221206 23:18:03.141" endtime="20221206 23:18:03.146"/>
+</kw>
+<status status="PASS" starttime="20221206 23:17:57.110" endtime="20221206 23:18:03.146"/>
+</kw>
+<doc>Data Driven Test</doc>
+<status status="FAIL" starttime="20221206 23:14:23.661" endtime="20221206 23:18:03.146"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="2" skip="0" id="s1" name="Opensource-Demo Xlsx">Opensource-Demo Xlsx</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

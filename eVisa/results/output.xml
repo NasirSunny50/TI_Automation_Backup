@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.9 on win32)" generated="20230103 16:44:00.910" rpa="false" schemaversion="3">
+<suite id="s1" name="eVisa" source="D:\Automation\eVisa">
+<suite id="s1-s1" name="evisaMFA" source="D:\Automation\eVisa\evisaMFA.robot">
+<test id="s1-s1-t1" name="Login" line="7">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://192.168.4.94:8082/evisa-portal/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230103 16:44:01.141" level="INFO">Opening browser 'chrome' to base url 'http://192.168.4.94:8082/evisa-portal/'.</msg>
+<status status="PASS" starttime="20230103 16:44:01.140" endtime="20230103 16:44:11.130"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230103 16:44:11.130" endtime="20230103 16:44:11.259"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@href='/evisa-portal/oauth2/authorization/iam']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230103 16:44:11.263" level="INFO">Clicking element 'xpath=//a[@href='/evisa-portal/oauth2/authorization/iam']'.</msg>
+<status status="PASS" starttime="20230103 16:44:11.261" endtime="20230103 16:44:11.908"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 16:44:13.921" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230103 16:44:11.909" endtime="20230103 16:44:13.921"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>sunnytigerit123@yopmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230103 16:44:13.923" level="INFO">Typing text 'sunnytigerit123@yopmail.com' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20230103 16:44:13.923" endtime="20230103 16:44:14.039"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 16:44:15.050" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230103 16:44:14.040" endtime="20230103 16:44:15.052"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230103 16:44:15.062" level="INFO">Typing text '123456' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230103 16:44:15.059" endtime="20230103 16:44:15.146"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 16:44:16.148" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230103 16:44:15.147" endtime="20230103 16:44:16.148"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230103 16:44:16.150" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20230103 16:44:16.149" endtime="20230103 16:44:16.866"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 16:44:17.878" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230103 16:44:16.867" endtime="20230103 16:44:17.878"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[contains(text(),'Try another method?')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230103 16:44:17.879" level="INFO">Clicking element 'xpath=//a[contains(text(),'Try another method?')]'.</msg>
+<status status="PASS" starttime="20230103 16:44:17.879" endtime="20230103 16:44:17.928"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 16:44:18.939" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230103 16:44:17.929" endtime="20230103 16:44:18.939"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[contains(text(),'E-mail')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230103 16:44:18.941" level="INFO">Clicking element 'xpath=//div[contains(text(),'E-mail')]'.</msg>
+<status status="PASS" starttime="20230103 16:44:18.940" endtime="20230103 16:44:18.982"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 16:44:19.996" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230103 16:44:18.982" endtime="20230103 16:44:19.996"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.open('https://yopmail.com/en/', '_blank')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230103 16:44:19.998" level="INFO">Executing JavaScript:
+window.open('https://yopmail.com/en/', '_blank')
+Without any arguments.</msg>
+<status status="PASS" starttime="20230103 16:44:19.997" endtime="20230103 16:44:20.069"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230103 16:44:22.084" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230103 16:44:20.071" endtime="20230103 16:44:22.085"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230103 16:44:22.096" level="INFO">${handles} = ['CDwindow-C30959B7977671EAAE40DDAF0BFD9AA6', 'CDwindow-7B25DDF3D32C1E0ADA5BE06D509512AD']</msg>
+<status status="PASS" starttime="20230103 16:44:22.088" endtime="20230103 16:44:22.096"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@id='login']</arg>
+<arg>sunnytigerit123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230103 16:44:22.098" level="INFO">Typing text 'sunnytigerit123' into text field 'xpath=//input[@id='login']'.</msg>
+<msg timestamp="20230103 16:44:22.400" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230103 16:44:22.400" level="FAIL">Element with locator 'xpath=//input[@id='login']' not found.</msg>
+<status status="FAIL" starttime="20230103 16:44:22.097" endtime="20230103 16:44:22.404"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//i[contains(text(),'')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230103 16:44:22.406" endtime="20230103 16:44:22.406"/>
+</kw>
+<status status="FAIL" starttime="20230103 16:44:01.139" endtime="20230103 16:44:22.406">Element with locator 'xpath=//input[@id='login']' not found.</status>
+</test>
+<status status="FAIL" starttime="20230103 16:44:00.933" endtime="20230103 16:44:22.408"/>
+</suite>
+<status status="FAIL" starttime="20230103 16:44:00.914" endtime="20230103 16:44:22.410"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="eVisa">eVisa</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="evisaMFA">eVisa.evisaMFA</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

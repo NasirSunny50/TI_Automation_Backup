@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.9 on win32)" generated="20230101 15:51:49.306" rpa="false" schemaversion="3">
+<suite id="s1" name="OrangeHRM" source="D:\Automation\Robot Framework\OrangeHRM\OrangeHRM">
+<suite id="s1-s1" name="OrangeHRM Suite" source="D:\Automation\Robot Framework\OrangeHRM\OrangeHRM\OrangeHRM Suite.robot">
+<test id="s1-s1-t1" name="PIM" line="39">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230101 15:51:49.528" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20230101 15:51:49.527" endtime="20230101 15:52:03.650"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230101 15:52:06.656" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230101 15:52:03.650" endtime="20230101 15:52:06.659"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230101 15:52:06.662" endtime="20230101 15:52:06.801"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230101 15:52:09.807" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230101 15:52:06.802" endtime="20230101 15:52:09.807"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230101 15:52:09.809" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230101 15:52:09.808" endtime="20230101 15:52:09.872"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230101 15:52:09.873" level="INFO">Typing text 'admin123' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230101 15:52:09.873" endtime="20230101 15:52:09.942"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230101 15:52:11.945" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230101 15:52:09.944" endtime="20230101 15:52:11.945"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230101 15:52:11.947" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20230101 15:52:11.947" endtime="20230101 15:52:11.998"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230101 15:52:14.001" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230101 15:52:11.998" endtime="20230101 15:52:14.001"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@href='/web/index.php/pim/viewPimModule']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230101 15:52:14.003" level="INFO">Clicking element 'xpath=//a[@href='/web/index.php/pim/viewPimModule']'.</msg>
+<msg timestamp="20230101 15:52:14.353" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230101 15:52:14.354" level="FAIL">Element with locator 'xpath=//a[@href='/web/index.php/pim/viewPimModule']' not found.</msg>
+<status status="FAIL" starttime="20230101 15:52:14.002" endtime="20230101 15:52:14.373"/>
+</kw>
+<status status="FAIL" starttime="20230101 15:51:49.526" endtime="20230101 15:52:14.374">Element with locator 'xpath=//a[@href='/web/index.php/pim/viewPimModule']' not found.</status>
+</test>
+<status status="FAIL" starttime="20230101 15:51:49.329" endtime="20230101 15:52:14.376"/>
+</suite>
+<status status="FAIL" starttime="20230101 15:51:49.309" endtime="20230101 15:52:14.379"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="OrangeHRM">OrangeHRM</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="OrangeHRM Suite">OrangeHRM.OrangeHRM Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
