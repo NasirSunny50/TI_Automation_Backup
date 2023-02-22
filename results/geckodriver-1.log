@@ -1,0 +1,22 @@
+1677047096448	geckodriver	INFO	Listening on 127.0.0.1:60939
+1677047099538	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60940" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\tigerit\\AppData\\Local\\Temp\\rust_mozprofileG5U7Mo"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677047100046	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677047100050	Marionette	INFO	Listening on port 60973
+Read port: 60973
+WebDriver BiDi listening on ws://127.0.0.1:60940
+1677047100159	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\tigerit\\AppData\\Local\\Temp\\rust_mozprofileG5U7Mo\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60940/devtools/browser/cc7c1d9f-d2eb-489b-a250-63ae8e6f395f
+console.error: (new TypeError("this._searchProviderInfo is null", "resource:///modules/SearchSERPTelemetry.sys.mjs", 461))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://tiger-iam.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://tiger-iam.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://yopmail.com."
+JavaScript error: https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-5609129721109980&output=html&h=120&slotname=3963950454&adk=1360104773&adf=1895133923&pi=t.ma~as.3963950454&w=696&lmt=1677047133&rafmt=12&format=696x120&url=https%3A%2F%2Fyopmail.com%2Fen%2F&fwrattr=false&wgl=1&dt=1677047128446&bpp=1&bdt=4015&idt=1190&shv=r20230216&mjsv=m202302130101&ptt=9&saldr=aa&abxe=1&prev_fmts=0x0&nras=1&correlator=1004890223743&frm=20&pv=1&ga_vid=410660634.1677047128&ga_sid=1677047131&ga_hid=11671644&ga_fc=1&u_tz=360&u_his=1&u_h=1080&u_w=1920&u_ah=1040&u_aw=1920&u_cd=24&u_sd=1&adx=366&ady=182&biw=1903&bih=955&scr_x=0&scr_y=0&eid=44759876%2C44759927%2C44777877%2C44759837%2C31071869%2C31071756%2C31071263&oid=2&pvsid=1218139625902800&tmod=1809314399&nvt=1&ref=http%3A%2F%2Ftiger-iam.com%2F&fc=1920&brdim=-8%2C-8%2C-8%2C-8%2C1920%2C0%2C1936%2C1056%2C1920%2C955&vis=1&rsz=%7C%7CeE%7C&abl=CS&pfx=0&fu=256&bc=31&ifi=2&uci=a!2&fsb=1&xpc=QQt071LMtF&p=https%3A//yopmail.com&dtd=2210, line 1: NS_ERROR_UNEXPECTED: 
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.

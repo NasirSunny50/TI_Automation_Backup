@@ -1,0 +1,21 @@
+1677047386415	geckodriver	INFO	Listening on 127.0.0.1:61748
+1677047389493	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61749" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\tigerit\\AppData\\Local\\Temp\\rust_mozprofileNlTzBO"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677047390598	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677047390604	Marionette	INFO	Listening on port 61770
+WebDriver BiDi listening on ws://127.0.0.1:61749
+Read port: 61770
+1677047391840	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\tigerit\\AppData\\Local\\Temp\\rust_mozprofileNlTzBO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61749/devtools/browser/a925d126-8f0d-48d9-a8aa-74a1037f4695
+console.error: (new TypeError("this._searchProviderInfo is null", "resource:///modules/SearchSERPTelemetry.sys.mjs", 461))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://tiger-iam.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://tiger-iam.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://yopmail.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1677047465480	Marionette	INFO	Stopped listening on port 61770
+Dynamically enable window occlusion 1

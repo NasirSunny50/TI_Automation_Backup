@@ -1,0 +1,21 @@
+1677049016506	geckodriver	INFO	Listening on 127.0.0.1:57023
+1677049019549	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57024" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\tigerit\\AppData\\Local\\Temp\\rust_mozprofileEBtiQD"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677049020012	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677049020016	Marionette	INFO	Listening on port 57047
+Read port: 57047
+WebDriver BiDi listening on ws://127.0.0.1:57024
+1677049020428	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\tigerit\\AppData\\Local\\Temp\\rust_mozprofileEBtiQD\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57024/devtools/browser/4c233216-c034-4191-9a8c-d26b35717246
+console.error: (new TypeError("this._searchProviderInfo is null", "resource:///modules/SearchSERPTelemetry.sys.mjs", 461))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://tiger-iam.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://tiger-iam.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://yopmail.com."
+JavaScript error: https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-5609129721109980&output=html&h=194&slotname=8593476511&adk=3210112960&adf=844537689&pi=t.ma~as.8593476511&w=775&lmt=1677049053&rafmt=11&format=775x194&url=https%3A%2F%2Fyopmail.com%2Fen%2F&fwrattr=false&wgl=1&dt=1677049047394&bpp=1&bdt=3360&idt=765&shv=r20230216&mjsv=m202302130101&ptt=9&saldr=aa&abxe=1&prev_fmts=0x0%2C696x120%2C325x200&nras=1&correlator=6775159567585&frm=20&pv=1&ga_vid=175740364.1677049047&ga_sid=1677049049&ga_hid=625264815&ga_fc=1&rplot=4&u_tz=360&u_his=1&u_h=1080&u_w=1920&u_ah=1040&u_aw=1920&u_cd=24&u_sd=1&adx=744&ady=462&biw=1903&bih=955&scr_x=0&scr_y=0&eid=44777876%2C44759875%2C44759926%2C44759837%2C31071869%2C44779794&oid=2&pvsid=2340589605725617&tmod=1094572782&nvt=1&ref=http%3A%2F%2Ftiger-iam.com%2F&fc=1920&brdim=-8%2C-8%2C-8%2C-8%2C1920%2C0%2C1936%2C1056%2C1920%2C955&vis=1&rsz=%7C%7CEe%7C&abl=CS&pfx=0&fu=128&bc=31&ifi=4&uci=a!4&fsb=1&xpc=Gm2K1WfVOw&p=https%3A//yopmail.com&dtd=1343, line 1: NS_ERROR_UNEXPECTED: 
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Parent 4260, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:777

@@ -1,0 +1,116 @@
+1677048726934	geckodriver	INFO	Listening on 127.0.0.1:55851
+1677048729964	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55852" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\tigerit\\AppData\\Local\\Temp\\rust_mozprofilelmBwVx"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1677048730496	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1677048730500	Marionette	INFO	Listening on port 55870
+WebDriver BiDi listening on ws://127.0.0.1:55852
+Read port: 55870
+Read port: 55870
+1677048734100	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\tigerit\\AppData\\Local\\Temp\\rust_mozprofilelmBwVx\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55852/devtools/browser/e3cff87c-2e87-4369-b3f3-82bd8ff962bc
+console.error: (new TypeError("this._searchProviderInfo is null", "resource:///modules/SearchSERPTelemetry.sys.mjs", 461))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://tiger-iam.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://tiger-iam.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://yopmail.com."
+JavaScript error: https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-5609129721109980&output=html&h=120&slotname=3963950454&adk=1360104773&adf=1895133923&pi=t.ma~as.3963950454&w=696&lmt=1677048764&rafmt=12&format=696x120&url=https%3A%2F%2Fyopmail.com%2Fen%2F&fwrattr=false&wgl=1&dt=1677048758443&bpp=103&bdt=3622&idt=1016&shv=r20230216&mjsv=m202302130101&ptt=9&saldr=aa&abxe=1&prev_fmts=0x0&nras=1&correlator=5370371249516&frm=20&pv=1&ga_vid=1783585542.1677048758&ga_sid=1677048760&ga_hid=1345715796&ga_fc=1&u_tz=360&u_his=1&u_h=1080&u_w=1920&u_ah=1040&u_aw=1920&u_cd=24&u_sd=1&adx=366&ady=182&biw=1903&bih=955&scr_x=0&scr_y=0&eid=44759876%2C44777876%2C44759837%2C44759927%2C31071755%2C31072500&oid=2&pvsid=2716573827096458&tmod=1341146806&nvt=1&ref=http%3A%2F%2Ftiger-iam.com%2F&fc=1920&brdim=-8%2C-8%2C-8%2C-8%2C1920%2C0%2C1936%2C1056%2C1920%2C955&vis=1&rsz=%7C%7CeE%7C&abl=CS&pfx=0&fu=256&bc=31&ifi=2&uci=a!2&fsb=1&xpc=s6ji8EL6Pv&p=https%3A//yopmail.com&dtd=2026, line 1: NS_ERROR_UNEXPECTED: 
+JavaScript error: https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-5609129721109980&output=html&h=194&slotname=8593476511&adk=3210112960&adf=844537689&pi=t.ma~as.8593476511&w=775&lmt=1677048764&rafmt=11&format=775x194&url=https%3A%2F%2Fyopmail.com%2Fen%2F&fwrattr=false&wgl=1&dt=1677048758443&bpp=1&bdt=3622&idt=1046&shv=r20230216&mjsv=m202302130101&ptt=9&saldr=aa&abxe=1&prev_fmts=0x0%2C696x120%2C325x200&nras=1&correlator=5370371249516&frm=20&pv=1&ga_vid=1783585542.1677048758&ga_sid=1677048760&ga_hid=1345715796&ga_fc=1&rplot=4&u_tz=360&u_his=1&u_h=1080&u_w=1920&u_ah=1040&u_aw=1920&u_cd=24&u_sd=1&adx=744&ady=462&biw=1903&bih=955&scr_x=0&scr_y=0&eid=44759876%2C44777876%2C44759837%2C44759927%2C31071755%2C31072500&oid=2&pvsid=2716573827096458&tmod=1341146806&nvt=1&ref=http%3A%2F%2Ftiger-iam.com%2F&fc=1920&brdim=-8%2C-8%2C-8%2C-8%2C1920%2C0%2C1936%2C1056%2C1920%2C955&vis=1&rsz=%7C%7CEe%7C&abl=CS&pfx=0&fu=128&bc=31&ifi=4&uci=a!4&fsb=1&xpc=KytzbPUXII&p=https%3A//yopmail.com&dtd=2036, line 1: NS_ERROR_UNEXPECTED: 
+JavaScript error: https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-5609129721109980&output=html&h=250&slotname=9946920783&adk=2523182058&adf=1596354812&pi=t.ma~as.9946920783&w=1180&lmt=1677048764&rafmt=12&format=1180x250&url=https%3A%2F%2Fyopmail.com%2Fen%2F&fwrattr=false&wgl=1&dt=1677048758443&bpp=1&bdt=3623&idt=1058&shv=r20230216&mjsv=m202302130101&ptt=9&saldr=aa&abxe=1&prev_fmts=0x0%2C696x120%2C325x200%2C775x194%2C775x194&nras=1&correlator=5370371249516&frm=20&pv=1&ga_vid=1783585542.1677048758&ga_sid=1677048760&ga_hid=1345715796&ga_fc=1&u_tz=360&u_his=1&u_h=1080&u_w=1920&u_ah=1040&u_aw=1920&u_cd=24&u_sd=1&adx=362&ady=1896&biw=1903&bih=955&scr_x=0&scr_y=0&eid=44759876%2C44777876%2C44759837%2C44759927%2C31071755%2C31072500&oid=2&pvsid=2716573827096458&tmod=1341146806&nvt=1&ref=http%3A%2F%2Ftiger-iam.com%2F&fc=1920&brdim=-8%2C-8%2C-8%2C-8%2C1920%2C0%2C1936%2C1056%2C1920%2C955&vis=1&rsz=%7C%7CeEbr%7C&abl=CS&pfx=0&fu=256&bc=31&ifi=6&uci=a!6&btvi=2&fsb=1&xpc=sZxyaAjADd&p=https%3A//yopmail.com&dtd=2042, line 1: NS_ERROR_UNEXPECTED: 
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1677048782352	Marionette	INFO	Stopped listening on port 55870
+Dynamically enable window occlusion 1
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:829:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:829:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:829:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  TelemetryController: shutting down
+          Phase: profile-before-change-telemetry
+          State: Error getting state: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange" at addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:829:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:829:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
