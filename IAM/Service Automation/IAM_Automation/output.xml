@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.9 on win32)" generated="20230315 17:11:32.672" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="d:\Github\TI_Automation_Backup\IAM\Service Automation\IAM_Automation\test.robot">
+<test id="s1-t1" name="Run Python Script" line="11">
+<kw name="Run Process" library="Process">
+<var>${result}</var>
+<arg>${python}</arg>
+<arg>${oauth_script}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<msg timestamp="20230315 17:11:32.957" level="INFO">Starting process:
+python oauth.py</msg>
+<msg timestamp="20230315 17:11:32.963" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20230315 17:11:33.278" level="INFO">Process completed.</msg>
+<msg timestamp="20230315 17:11:33.278" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20230315 17:11:32.954" endtime="20230315 17:11:33.279"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${bearerToken}</var>
+<arg>${result.stdout}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230315 17:11:33.284" level="INFO">${bearerToken} = Bearer eyJraWQiOiJpYW0tand0IiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJzdW5ueUB5b3BtYWlsLmNvbSIsInNjb3BlIjpbImFkbWluIl0sImlzcyI6Imh0dHA6Ly8xOTIuMTY4LjEwNC4yMDo4MDgwIiwiZXhwIjoxNjc4ODc5NTk0LCJpYX...</msg>
+<status status="PASS" starttime="20230315 17:11:33.281" endtime="20230315 17:11:33.285"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${bearerToken}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230315 17:11:33.287" level="INFO">${bearerToken} = Bearer eyJraWQiOiJpYW0tand0IiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJzdW5ueUB5b3BtYWlsLmNvbSIsInNjb3BlIjpbImFkbWluIl0sImlzcyI6Imh0dHA6Ly8xOTIuMTY4LjEwNC4yMDo4MDgwIiwiZXhwIjoxNjc4ODc5NTk0LCJpYX...</msg>
+<status status="PASS" starttime="20230315 17:11:33.286" endtime="20230315 17:11:33.288"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${bearerToken}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230315 17:11:33.289" endtime="20230315 17:11:33.290"/>
+</kw>
+<status status="PASS" starttime="20230315 17:11:32.952" endtime="20230315 17:11:33.291"/>
+</test>
+<test id="s1-t2" name="get mfa settings test" line="17">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Authorization=${bearerToken}</arg>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230315 17:11:33.299" level="INFO">${headers} = {'Authorization': 'Bearer eyJraWQiOiJpYW0tand0IiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJzdW5ueUB5b3BtYWlsLmNvbSIsInNjb3BlIjpbImFkbWluIl0sImlzcyI6Imh0dHA6Ly8xOTIuMTY4LjEwNC4yMDo4MDgwIiwiZXhwIjo...</msg>
+<status status="PASS" starttime="20230315 17:11:33.296" endtime="20230315 17:11:33.299"/>
+</kw>
+<kw name="GET" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${baseurl}/admin/settings/mfa</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20230315 17:11:33.390" level="INFO">GET Request : url=http://tiger-iam.com/iam/admin/settings/mfa 
+ path_url=/iam/admin/settings/mfa 
+ headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJraWQiOiJpYW0tand0IiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJzdW5ueUB5b3BtYWlsLmNvbSIsInNjb3BlIjpbImFkbWluIl0sImlzcyI6Imh0dHA6Ly8xOTIuMTY4LjEwNC4yMDo4MDgwIiwiZXhwIjoxNjc4ODc5NTk0LCJpYXQiOjE2Nzg4Nzg2OTR9.TAZ-te5ag_W0vwL6UwsBNt1eJ-uEaKOEJHgpMYebObvcn92e-5IcQCkkjqZ6YEnsI17NaYDNtFI91E0Nxxd2LTYol3p5OqK7LyU-8U-HMgBY9VR4FXUtDjk7cCgYVrFTOMimbHjGgkxkdO7GX5PUbt-kH8EG5lln4yNvwYRmhgwbz2T2nZ25eAIk5FC0ulQ-Bl5pYKBrb6ODZw9QzJxftDoSmNT9APN0J3fwzP1_fpoaZKjfdQRXV_RhlIww9eMP4RjoStWv-nass7W1Pn3e9TcdqqkWknhM8tCz-bv5XpnBILBvlJ9yTysudA2vbXNhMRqS6CuxUTejAlJTqRXznw', 'Content-Type': 'application/json'} 
+ body=None 
+ </msg>
+<msg timestamp="20230315 17:11:33.391" level="INFO">GET Response : url=http://tiger-iam.com/iam/admin/settings/mfa 
+ status=200, reason= 
+ headers={'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Date': 'Wed, 15 Mar 2023 11:11:34 GMT', 'Connection': 'close'} 
+ body={"mfaEnabled":true,"maxRestartCount":2,"maxVerificationCount":2,"verificationTimeout":180000} 
+ </msg>
+<msg timestamp="20230315 17:11:33.391" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230315 17:11:33.300" endtime="20230315 17:11:33.392"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20230315 17:11:33.395" level="INFO">${status code} = 200</msg>
+<status status="PASS" starttime="20230315 17:11:33.393" endtime="20230315 17:11:33.395"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230315 17:11:33.397" endtime="20230315 17:11:33.398"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230315 17:11:33.400" endtime="20230315 17:11:33.402"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230315 17:11:33.403" endtime="20230315 17:11:33.405"/>
+</kw>
+<status status="PASS" starttime="20230315 17:11:33.294" endtime="20230315 17:11:33.406"/>
+</test>
+<test id="s1-t3" name="get properties settings test" line="25">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Authorization=${bearerToken}</arg>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230315 17:11:33.415" level="INFO">${headers} = {'Authorization': 'Bearer eyJraWQiOiJpYW0tand0IiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJzdW5ueUB5b3BtYWlsLmNvbSIsInNjb3BlIjpbImFkbWluIl0sImlzcyI6Imh0dHA6Ly8xOTIuMTY4LjEwNC4yMDo4MDgwIiwiZXhwIjo...</msg>
+<status status="PASS" starttime="20230315 17:11:33.411" endtime="20230315 17:11:33.416"/>
+</kw>
+<kw name="GET" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${baseurl}/admin/settings/properties</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20230315 17:11:33.442" level="INFO">GET Request : url=http://tiger-iam.com/iam/admin/settings/properties 
+ path_url=/iam/admin/settings/properties 
+ headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJraWQiOiJpYW0tand0IiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJzdW5ueUB5b3BtYWlsLmNvbSIsInNjb3BlIjpbImFkbWluIl0sImlzcyI6Imh0dHA6Ly8xOTIuMTY4LjEwNC4yMDo4MDgwIiwiZXhwIjoxNjc4ODc5NTk0LCJpYXQiOjE2Nzg4Nzg2OTR9.TAZ-te5ag_W0vwL6UwsBNt1eJ-uEaKOEJHgpMYebObvcn92e-5IcQCkkjqZ6YEnsI17NaYDNtFI91E0Nxxd2LTYol3p5OqK7LyU-8U-HMgBY9VR4FXUtDjk7cCgYVrFTOMimbHjGgkxkdO7GX5PUbt-kH8EG5lln4yNvwYRmhgwbz2T2nZ25eAIk5FC0ulQ-Bl5pYKBrb6ODZw9QzJxftDoSmNT9APN0J3fwzP1_fpoaZKjfdQRXV_RhlIww9eMP4RjoStWv-nass7W1Pn3e9TcdqqkWknhM8tCz-bv5XpnBILBvlJ9yTysudA2vbXNhMRqS6CuxUTejAlJTqRXznw', 'Content-Type': 'application/json'} 
+ body=None 
+ </msg>
+<msg timestamp="20230315 17:11:33.443" level="INFO">GET Response : url=http://tiger-iam.com/iam/admin/settings/properties 
+ status=200, reason= 
+ headers={'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Date': 'Wed, 15 Mar 2023 11:11:34 GMT', 'Connection': 'close'} 
+ body={"friendlyName":"IAM","host":"http://tiger-iam.com/iam","logoutURIs":"http://tiger-iam.com/post_logout,http://tiger-iam.com/another_post_logout","passwordResetLifetime":3} 
+ </msg>
+<msg timestamp="20230315 17:11:33.444" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230315 17:11:33.418" endtime="20230315 17:11:33.444"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20230315 17:11:33.450" level="INFO">${status code} = 200</msg>
+<status status="PASS" starttime="20230315 17:11:33.446" endtime="20230315 17:11:33.450"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230315 17:11:33.452" endtime="20230315 17:11:33.454"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230315 17:11:33.455" endtime="20230315 17:11:33.456"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230315 17:11:33.457" endtime="20230315 17:11:33.458"/>
+</kw>
+<status status="PASS" starttime="20230315 17:11:33.408" endtime="20230315 17:11:33.459"/>
+</test>
+<status status="PASS" starttime="20230315 17:11:32.682" endtime="20230315 17:11:33.462"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
