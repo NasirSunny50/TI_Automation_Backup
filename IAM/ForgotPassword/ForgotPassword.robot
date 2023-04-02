@@ -4,22 +4,22 @@ Library    Telnet
 Library    Dialogs
 
 *** Variables ***
-${current_url}     http://evisa.tiger-iam.com/iam/authenticate
+${current_url}     http://tiger-iam.com/iam-admin/
 ${email}    sunnytigerit123@yopmail.com
 
 *** Test Cases ***
-Evisa
-    Open Evisa
+IAM
+    Open Admin Portal
     Forgot Password
     Check Email
     Change Password
 
 *** Keywords ***
-Open Evisa
-    Open Browser    http://192.168.4.94:8082/evisa-portal/      Chrome
+Open Admin Portal
+    Open Browser    ${current_url}      Chrome
     Maximize Browser Window
     Sleep    2s
-    Click Element    xpath=//header/div[1]/nav[1]/ul[1]/li[7]/a[1]
+    Click Element    xpath=//header/div[1]/div[1]/div[1]/div[2]/button[1]/span[3]
     Sleep    2s
     # Run Keyword    Forgot Password
 
