@@ -14,10 +14,10 @@ Evisa
 
 *** Keywords ***
 Open Evisa
-    Open Browser    http://192.168.4.94:8082/evisa-portal/      Chrome
+    Open Browser    http://tiger-iam.com/iam-admin/      Chrome
     Maximize Browser Window
     Sleep    2s
-    Click Element    xpath=//header/div[1]/nav[1]/ul[1]/li[7]/a[1]
+    Click Element    xpath=//header/div[1]/div[1]/div[1]/div[2]/button[1]/span[3]
     Sleep    2s
     Run Keyword     Login
 
@@ -55,6 +55,6 @@ Method Select
     Sleep    1s
     Click Button    xpath=//body/div[@id='app']/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]/div[3]/button[1]
     Sleep    2s
-    Page Should Contain Element    xpath=//h4[contains(text(),'List of Applications')]
+    Page Should Contain Element    xpath=//span[contains(text(),'Applications')]
 
 
