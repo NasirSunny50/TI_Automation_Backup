@@ -6,21 +6,21 @@ Library     OperatingSystem
 
 *** Variables ***
 
-${firstname}    eVisa
+${firstname}    IAM
 ${lastname}     Test
 ${password}     123456
 
 *** Test Cases ***
-Evisa
-    Open Evisa
+IAM
+    Open Admin Portal
 
 
 *** Keywords ***
-Open Evisa
-    Open Browser    http://192.168.4.94:8082/evisa-portal/      Chrome
+Open Admin Portal
+    Open Browser    http://tiger-iam.com/iam-admin/      Chrome
     Maximize Browser Window
     Sleep    2s
-    Click Element    xpath=//header/div[1]/nav[1]/ul[1]/li[7]/a[1]
+    Click Element    xpath=//header/div[1]/div[1]/div[1]/div[2]/button[1]/span[3]
     Sleep    2s
     Run Keyword    Sign Up
 
@@ -37,6 +37,8 @@ Sign Up
     Sleep    1s
     Input Text    xpath=//body/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[4]/input[1]   ${password}
     Sleep    1s
+    Input Text    id=confirm_password    ${password}
+    Sleep    1s
     Click Button    xpath=//button[contains(text(),'Create Account')]
 
     Execute Javascript    window.open("https://yopmail.com/en/")
@@ -50,7 +52,7 @@ Sign Up
     Sleep    2s
     Select Frame    ifmail
     Click Element    xpath=//a[contains(text(),'Confirm Email')]
-    Sleep    20s
+    Sleep    2s
 
 #    Switch Window   LOCATOR=index=3
 #    Page Should Contain Element    xapth=/html/body
