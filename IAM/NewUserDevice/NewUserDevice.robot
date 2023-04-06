@@ -17,7 +17,7 @@ Open Portal
     Open Browser    ${current_url}
     Maximize Browser Window
     Sleep    2s
-    Click Element    xpath=//header/div[1]/a[1]
+    Click Element    xpath=//header/div[1]/div[1]/div[1]/div[2]/button[1]/span[3]
     Sleep    2s
     Run Keyword     Login
 

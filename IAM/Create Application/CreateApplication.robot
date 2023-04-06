@@ -2,11 +2,11 @@
 Library     SeleniumLibrary
 Library    Telnet
 Library    Dialogs
-Resource    ../ConfirmationEmail/ConfirmationEmail.robot
+
 
 *** Variables ***
 ${current_url}     http://tiger-iam.com/iam-admin/
-${username}     sunnytigerit123@yopmail.com
+${username}     sunny@yopmail.com
 ${password}     123456
 
 *** Test Cases ***
@@ -14,6 +14,7 @@ IAM
     Open Admin Portal
     Login
     Method Select
+    Create Application
 
 *** Keywords ***
 Open Admin Portal
@@ -56,6 +57,22 @@ Method Select
     Sleep    1s
     Click Button    xpath=//body/div[@id='app']/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]/div[3]/button[1]
     Sleep    2s
-    Page Should Contain Element    xpath=//span[contains(text(),'Applications')]
+
+Create Application
+    Click Element    xpath=//div[contains(text(),'Applications')]
+    Sleep    1s
+    Click Element    xpath=//body/div[@id='app']/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[2]/a[1]/span[3]
+    Sleep    1s
+    Input Text    xpath=/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[3]/input[1]    AutomateTest
+    Sleep    1s
+    Input Text    xpath=/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/div[3]/input[1]    www.automatelogout.com
+    Sleep    1s
+    Input Text    xpath=/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[3]/input[1]    www.redirectlogout.com
+    Sleep    1s
+    Input Text    xpath=/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/form[1]/div[4]/div[1]/div[1]/div[3]/input[1]    180000
+    Sleep    2s
+    Click Element    xpath=/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/form[1]/button[1]/span[3]
+    Sleep    1s
+    Page Should Contain Element    xpath=//div[contains(text(),'Application Created Successfully')]
 
 
